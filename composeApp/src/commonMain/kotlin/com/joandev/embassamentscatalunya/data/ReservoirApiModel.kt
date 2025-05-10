@@ -5,13 +5,13 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class ReservoirApiModel(
-    @SerialName("nom_embassament")
+    @SerialName("estaci")
     val name: String,
     @SerialName("volum_embassat")
     val currentVolumeHm3String: String,
     @SerialName("percentatge_volum_embassat")
     val percentageFullString: String,
-    @SerialName("data")
+    @SerialName("dia")
     val lastUpdate: String
 ) {
     val currentVolumeHm3: Double

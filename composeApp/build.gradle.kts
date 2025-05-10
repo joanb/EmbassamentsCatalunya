@@ -18,7 +18,7 @@ kotlin {
         }
     }
     
-    listOf(
+    /*listOf(
         iosX64(),
         iosArm64(),
         iosSimulatorArm64()
@@ -27,13 +27,14 @@ kotlin {
             baseName = "ComposeApp"
             isStatic = true
         }
-    }
+    }*/
     
     sourceSets {
         
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
+            implementation(libs.ktor.ktor.client.android) // Ktor client engine for Android
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -52,6 +53,8 @@ kotlin {
 
             // Kotlinx Serialization
             implementation(libs.kotlinx.serialization.json)
+
+            implementation(libs.lifecycle.viewmodel.compose)
 
         }
     }
