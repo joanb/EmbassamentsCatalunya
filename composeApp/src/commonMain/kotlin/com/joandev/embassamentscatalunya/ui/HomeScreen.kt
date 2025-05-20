@@ -35,10 +35,6 @@ fun HomeScreen() {
     val isLoading by viewModel.isLoading.collectAsState()
     val errorMessage by viewModel.errorMessage.collectAsState()
 
-    // LaunchedEffect(Unit) { // Data is now fetched in ViewModel's init
-    //     viewModel.fetchWaterLevels()
-    // }
-
     Scaffold(
         topBar = {
             TopAppBar(title = { Text("Catalan Reservoir Levels") })
